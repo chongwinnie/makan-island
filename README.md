@@ -140,6 +140,7 @@ Users can also create accounts locally through a sign-up modal. After successful
   - Use httpOnly secure cookies or tokens.  
   - Verify Google ID tokens server-side.
 
+
 ---
 
 ## ✅ Assignment Relevance
