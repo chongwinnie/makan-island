@@ -1,7 +1,7 @@
 # Makan Island 🏝️
 
 ## 📌 About The Project
-Makan Island is a responsive, interactive front-end web application that serves as a guide for discovering food, restaurants, and top dining spots across different Malaysian states—including Kedah, Penang, Kelantan, and Perak. 
+Makan Island is a responsive, interactive front-end web application that serves as a guide for discovering food, restaurants, and top dining spots across different Malaysia states—including Kedah, Penang, Kelantan, and Perak. 
 
 Discover bold flavors, hidden gems, and trending bites from the streets you love. Every click brings you closer to your next favorite dish.
 
