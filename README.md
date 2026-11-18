@@ -190,6 +190,6 @@ The following sitemap illustrates the overall navigation structure of Makan Isla
 
 <div align="center">
 
-![Makan Island Sitemap](./makan-island-sitemap.png)
+![Makan Island Sitemap](./makan-island-sitemap.jpg)
 
 </div>
