@@ -184,3 +184,12 @@ flowchart TD
     M --> N["Logout"]
     N --> O["Clear localStorage session and delete cookie"]
 ```
+## 🗺️ Website Sitemap
+
+The following sitemap illustrates the overall navigation structure of Makan Island, including its main pages, state-specific food guides, interactive features, and supporting pages.
+
+<div align="center">
+
+![Makan Island Sitemap](./makan-island-sitemap.png)
+
+</div>
