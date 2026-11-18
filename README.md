@@ -142,7 +142,7 @@ Users can also create accounts locally through a sign-up modal. After successful
 
 ---
 
-## ✅ Assignment Relevance
+## ✅ Coursework Relevance
 - **External API used:** Google Identity Services (RESTful).  
 - **Client-side storage used:** localStorage + cookies.  
 - **Session handling:** Auto login for 3 days via cookie.  
@@ -152,26 +152,35 @@ Users can also create accounts locally through a sign-up modal. After successful
 
 ## 📊 Login Flow Diagram
 
+The following flowchart illustrates the login, session management, and logout processes of Makan Island.
+
 ```mermaid
 flowchart TD
-    A[User opens Login Page] --> B{Session in localStorage?}
-    B -- Yes --> C[Show profile immediately]
-    B -- No --> D{remember_user cookie exists?}
-    D -- Yes --> E[Rebuild profile from local account]
-    D -- No --> F[User must log in]
+    A["User opens Login Page"] --> B{"Session in localStorage?"}
 
-    F --> G[Local Login Form]
-    F --> H[Google Sign-In]
+    B -->|Yes| C["Show user profile"]
+    B -->|No| D{"remember_user cookie exists?"}
 
-    G --> I[Validate credentials in users_v1]
-    I -- Success --> J[Save profile in localStorage + set cookie (3 days)]
+    D -->|Yes| E["Rebuild profile from local account"]
+    D -->|No| F["User must log in"]
+
+    E --> C
+
+    F --> G["Local Login Form"]
+    F --> H["Google Sign-In"]
+
+    G --> I["Validate credentials in users_v1"]
+
+    I -->|Success| J["Save profile in localStorage and set cookie for 3 days"]
+    I -->|Failure| G
+
     J --> C
 
-    H --> K[Decode JWT from Google]
-    K --> L[Save profile in localStorage + set cookie (3 days)]
+    H --> K["Decode JWT from Google"]
+    K --> L["Save profile in localStorage and set cookie for 3 days"]
     L --> C
 
-    C --> M[User sees profile panel]
-    M --> N[Logout]
-    N --> O[Clear localStorage + delete cookie]
+    C --> M["User sees profile panel"]
+    M --> N["Logout"]
+    N --> O["Clear localStorage session and delete cookie"]
 ```
